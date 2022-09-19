@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { useForm } from 'react-hook-form'
 
 export default function AddItem(props) {
     let add=props.add
@@ -29,7 +30,7 @@ export default function AddItem(props) {
     props.addItem(newItem)
   },[newItem])  
 
-
+const{handleSubmit,register}=useForm()
     
 
   return (
@@ -37,9 +38,13 @@ export default function AddItem(props) {
         <div className={add?"form":'hide'}>
           <form action="" onSubmit={subMitFunc}>
             <label htmlFor="">Item</label>
-            <input type="text" placeholder='Input Item'  name='item' onInput={additem}/>
+            <input type="text" placeholder='Input Item'  name='item' onInput={additem} {...register('name',{
+              required:"item required"
+            })}/>
             <label htmlFor="">Price</label>
-            <input type="text" placeholder='Input Price'  name='price' onInput={addprice}/>
+            <input type="number" placeholder='Input Price'  name='price' onInput={addprice} {...register('price',{
+              required:true
+            })}/>
             <button>Add</button>
           </form>
         </div>

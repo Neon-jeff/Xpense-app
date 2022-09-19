@@ -3,6 +3,7 @@ import Nav from '../static/nav'
 import './welcome.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
 
 export default function Welcome() {
@@ -27,6 +28,7 @@ export default function Welcome() {
     }
   }
   const [text,setText]=useState('Get Started')
+  const{handleSubmit,register}=useForm()
    return (
     <div className='welcome'>
         <Nav/>
@@ -37,9 +39,9 @@ export default function Welcome() {
             <button onClick={toggleModal}>{text}</button>
         </header>
         <div className={showModal?'input-balance':'hide'}>
-          <h3>Set Balance</h3>
+          <h3>Set Budget</h3>
           <form action="" onSubmit={submitFunc}>
-            <input type="text" name='balance' placeholder='Input Balance' onChange={Updatebal}/>
+            <input type="number" name='balance' placeholder='Input Balance' onChange={Updatebal} required/>
             <Link to={'/dashboard'} state={{bal:balance}}>
               <button>Set Balance</button></Link>
           </form>
