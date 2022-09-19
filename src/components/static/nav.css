@@ -1,0 +1,21 @@
+.nav{
+    width: 100%;
+    background-color: green;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    color: white;
+    justify-content: space-between;
+    
+}
+.nav p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+.nav span{
+    display: block;
+    margin-right:50px;
+}

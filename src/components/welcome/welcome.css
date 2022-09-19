@@ -1,0 +1,122 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+.welcome{
+    width: 60%;
+    margin: 0 auto;
+}
+header{
+    width: 60%;
+    margin: 50px 0 0 0;
+    align-self: flex-start;
+}
+h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: rgb(47, 185, 12);
+}
+.sect{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.sect img{
+    border-radius: 100px;
+}
+button{
+    padding: 10px 20px;
+    background-color: blue;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    margin-top: 30px;
+    cursor: pointer;
+}
+button:hover{
+    color: green;
+    background-color: white;
+    border: 2px solid green;
+}
+.input-balance{
+    align-self: center;
+    width: 30%;
+    margin-right: 50px;
+    background-color: white;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 1.5px 4px rgb(230, 227, 227);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: Left 1s ease-in;
+    text-align: center;
+}
+.input-balance input{
+    display: block;
+    height: 30px;
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(226, 223, 223);
+    padding: 10px 2px;
+    border-radius: 5px;
+}
+.input-balance h3{
+    color: rgb(47, 185, 12);
+    text-align: center;  
+    font-size: 20px;
+}
+.input-balance button{
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+.hide{
+    display: none;
+}
+@keyframes Left{
+    0%{
+        transform: translateX(100px);
+    }
+    50%{
+        transform: 
+        translateY(-20px);
+
+    }
+    80%{
+        transform: translateX(20px);
+    }
+    100%{
+        transform: translateX(0px)
+        translateY(0px);
+    }
+}
+@media screen and (max-width:450px){
+    .welcome{width: 100%;}
+    .sect{flex-direction: column;
+          justify-content: center;   
+    }
+    header{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .input-balance{
+        width: 90%;
+        margin: 20px auto;
+        height: 200px;
+    }
+    form{
+        width: 70%;
+        text-align: center;
+    }
+    .input-balance input{
+        margin-top: 0px;
+        padding: 5px 10px;
+    }
+    form>button{
+        margin-left: -10px;
+    }
+}
+
